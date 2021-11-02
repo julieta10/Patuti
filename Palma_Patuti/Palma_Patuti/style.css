@@ -1,0 +1,161 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*Container*/
+#container {
+    top: 50%;
+	left: 50%;
+	display: block;
+	width: 800px;
+    height: 680px;
+    margin-top: -340px; /* HALF OF THE HEIGHT */
+    margin-left: -400px; /* HALF OF THE WIDTH */
+	overflow:hidden;
+	position: relative;
+    overflow: hidden;
+	background: url("moves/bg.png") no-repeat center center;
+	background-size: 800px 680px;
+}
+
+/*Bullets*/
+.bullet {	
+	position: absolute;
+    height: 5%;
+    width: 2%;
+  	background-repeat: no-repeat;
+	background-size: 10px 30px;
+    z-index: 1;
+}
+
+#bullet1 {
+    right: calc(10% + 8%/2 - 2%/2);
+	background-size: 25px 12px;
+	padding: 5px;
+	background-image: url("moves/bullet_h.png") ;
+	z-index: 2;
+}
+
+#bullet2 {
+    top: calc(40% + 8%/2 - 2%/2);
+	background-size: 25px 12px;
+	padding: 5px;
+	background-image: url("moves/bullet_h.png") ;
+	z-index: 3;
+}
+
+#bullet3 {
+    top: calc(70% + 8%/2 - 2%/2);
+	background-size: 25px 12px;
+	padding: 5px;
+	background-image: url("moves/bullet_h.png") ;
+	z-index: 4;
+}
+#bullet4 {
+    left: calc(20% + 8%/2 - 2%/2);
+	background-image: url("moves/bullet_v.png") ;
+	z-index: 5;
+}
+#bullet5 {
+    left: calc(40% + 8%/2 - 2%/2);
+	background-image: url("moves/bullet_v.png") ;
+	z-index: 6;
+}
+#bullet6 {
+    left: calc(70% + 8%/2 - 2%/2);
+	background-image: url("moves/bullet_v.png") ;
+	z-index: 7;
+}
+
+/*Floor*/
+#floor {
+    position: absolute;
+    height: 100%;
+    width: 7%;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 10;
+	float: left;
+	top: 0;
+	left: 0;
+}
+#floor1 {
+    position: absolute;
+    height: 16%;
+    width: 100%;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 11;
+}
+
+/*Player*/
+#player {
+    height: 100px;
+    width: 93px;	
+    position: absolute;
+    bottom: 239px;
+	left: 370px;
+    background: url("moves/dock-1.png");
+    background-size: 63px 70px;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 8;
+}
+
+/*Platform*/
+#area {
+	position: absolute;
+	top: 410px;
+	left: 280px;
+	max-width: 100%;
+	height: 130px;
+	z-index: 9;
+}
+
+/*Restart*/
+#restart {
+    border: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	background: url("moves/restart.png") no-repeat center center;
+	background-size: 800px 680px;
+    background-color: #9400D3;
+    color: #8eff00;
+    top: 40%;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 14;
+}
+
+/*For Jump*/
+.animate{
+    animation: jump 120s linear;
+}
+	@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+/*Life of the Player*/
+#lifeDisplay {
+	
+    text-align: center;
+    font-size: 25px;
+    background-color: #eae2b7;
+	position: absolute;
+  	bottom: 7px;
+  	width: 100%;
+	z-index: 10;
+}

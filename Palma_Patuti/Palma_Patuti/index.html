@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title>Palma Julieta - Patuti</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="container">
+	<br>
+	<br>
+	<br>
+	<br>
+    <div id="bullet1" class="bullet" data-bullseye='1'></div>
+    <div id="bullet2" class="bullet" data-bullseye='2'></div>
+    <div id="bullet3" class="bullet" data-bullseye='3'></div>
+	<div id="bullet4" class="bullet" data-bullseye='4'></div>
+	<div id="bullet5" class="bullet" data-bullseye='5'></div>
+	<div id="bullet6" class="bullet" data-bullseye='6'></div>
+	  
+	<img id="area" src="moves/area.png">
+    <div id="player"></div>
+
+    <div id="floor"></div>
+	<div id="floor1"></div>
+	  
+    <button id="restart"></button>
+	 
+	<div id="lifeDisplay">
+      <span id="score"></span>Remain Life:
+      <span id="life"></span> || Use arrow keys to control
+    </div>
+  </div>
+	
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/collisionDetection.js"></script>
+  <script src="scripts/arrowKeysControl.js"></script>
+  <script src="scripts/variables.js"></script>
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
